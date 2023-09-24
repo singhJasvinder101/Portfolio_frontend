@@ -1005,9 +1005,6 @@ a:hover {
         transition: background-color 0.3s ease;
     }
 
-    .contact-btn :hover {
-        background-color: #555;
-    }
 
     footer {
         background-color: black;
