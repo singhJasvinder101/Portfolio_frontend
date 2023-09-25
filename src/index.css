@@ -51,6 +51,13 @@ a:hover {
     color: white;
 }
 
+
+.links li button {
+    color: rgb(135, 206, 235);
+    background-color: transparent;
+    border: none;
+}
+
 /* for 470px */
 @media screen and (max-width: 468px) {
     .project-img img {
@@ -197,7 +204,7 @@ a:hover {
         margin-top: 0.7rem;
     }
 
-    .links li a {
+    .links li button {
         color: rgb(135, 206, 235);
     }
 
@@ -651,8 +658,10 @@ a:hover {
         margin-left: 1.2rem;
     } */
 
-    .links li a {
+    .links li button {
         color: rgb(135, 206, 235);
+        background-color: transparent;
+        border: none;
     }
 
     .chat {

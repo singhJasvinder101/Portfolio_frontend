@@ -6,8 +6,8 @@ const HeroContent = () => {
     const controls = useAnimation();
 
     function animateHeroContent() {
-        gsap.from('.hero-content', { opacity: 0, y: 0, duration: 1, delay: 0 });
-        gsap.from('.hero-img', { opacity: 0, y: 0, duration: 1, delay: 0 });
+        gsap.from('.hero-content', { opacity: 0, y: 0, duration: 1, delay: 0.3 });
+        gsap.from('.hero-img', { opacity: 0, y: 0, duration: 1, delay: 0.6 });
         gsap.set('.aeroplane', { x: window.innerWidth * 0.25, y: 0, opacity: 0 });
 
         gsap.registerPlugin(MotionPathPlugin);
@@ -42,6 +42,17 @@ const HeroContent = () => {
         });
     }, [])
 
+    
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (showMobileMenu) {
+            setShowMobileMenu(false);
+        }
+    };
+
     return (
         <section id="hero" className="hero">
             <div className="hero-container">
@@ -53,11 +64,11 @@ const HeroContent = () => {
                         quality
                         work.</p>
                     <div id="hero-btns" className="mt-5 d-flex">
-                        <button className="btn">Download Resume</button>
+                        <a href='/images/About Me.pdf' className="btn" download>Download Resume</a>
                         <button id="projects-btn" className="btn mx-3">
-                            <a href="projects" id="proj"
-                                style={{ listStyle: 'none' }}>Projects <i className="fa fa-arrow-right"></i>
-                            </a>
+                            <button onClick={() => scrollToSection('about-me')} id="proj"
+                                style={{ background: 'transparent', border: 'none' }}>About Me <i className="fa fa-arrow-right"></i>
+                            </button>
                         </button>
                     </div>
                     <div className="hero-icons">

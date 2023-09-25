@@ -49,7 +49,7 @@ const ContactComponent = ({ contactSectionRef, contactSectionIsInView }) => {
 
 
     return (
-        <motion.div className="contact-section" ref={contactSectionRef}>
+        <motion.div id='contact' className="contact-section" ref={contactSectionRef}>
             <motion.h2
                 className="section-title"
                 style={{ color: 'rgb(135, 206, 235)' }}

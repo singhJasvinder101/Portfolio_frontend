@@ -7,7 +7,18 @@ const NavbarComponent = () => {
 
     const toggleMobileMenu = () => {
         setShowMobileMenu(!showMobileMenu);
+    };  
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (showMobileMenu) {
+            setShowMobileMenu(false);
+        }
     };
+
 
 
     const navbarVariants = {
@@ -61,24 +72,25 @@ const NavbarComponent = () => {
                             Jasvinder Singh
                         </div>
                         <ul className={`links ${showMobileMenu ? 'inactive' : 'active'}`}>
-                            <li><a href="/" style={{ margin: 'auto' }}>Home</a></li>
-                            <li><a href="about-me">About</a></li>
-                            <li><a href="projects">Projects</a></li>
-                            <li><a href="skills">Skills</a></li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><button onClick={() => scrollToSection('hero')} style={{ margin: 'auto' }}>Home</button></li>
+                            <li><button onClick={() => scrollToSection('about-me')}>About</button></li>
+                            <li><button onClick={() => scrollToSection('services')}>Services</button></li>
+                            <li><button onClick={() => scrollToSection('skills')}>Skills</button></li>
+                            <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
                         </ul>
                     </div>
                     <div>
-                        <button className="chat btn"><a href="contact" style={{ color: 'black' }}>Let's Chat
-                            <span><i className="ri-arrow-right-up-line"></i></span></a>
+                        <button className="chat btn" onClick={() => scrollToSection('contact')} style={{ color: 'black' }}>
+                            Let's Chat
+                            <span><i className="ri-arrow-right-up-line"></i></span>
                         </button>
                     </div>
                     <div className={`nav-btn mx-2 ${showMobileMenu ? 'btn-inactive' : 'btn-active'}`}
                         style={{ height: '2rem' }}
                         onClick={toggleMobileMenu}>
                         {showMobileMenu ?
-                            <i className="fas fa-bars" style={{fontSize: '1.5rem'}}></i> :
-                            <i className="fas fa-times" style={{fontSize: '1.5rem'}}></i>
+                            <i className="fas fa-bars" style={{ fontSize: '1.5rem' }}></i> :
+                            <i className="fas fa-times" style={{ fontSize: '1.5rem' }}></i>
                         }
                     </div>
                 </nav>
