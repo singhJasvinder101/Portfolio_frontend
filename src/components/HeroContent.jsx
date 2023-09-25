@@ -6,8 +6,8 @@ const HeroContent = () => {
     const controls = useAnimation();
 
     function animateHeroContent() {
-        gsap.from('.hero-content', { opacity: 0, y: 0, duration: 1, delay: 0.3 });
-        gsap.from('.hero-img', { opacity: 0, y: 0, duration: 1, delay: 0.6 });
+        gsap.from('.hero-content', { opacity: 0, y: 0, duration: 1, delay: 1.3 });
+        gsap.from('.hero-img', { opacity: 0, y: 0, duration: 1, delay: 1.6 });
         gsap.set('.aeroplane', { x: window.innerWidth * 0.25, y: 0, opacity: 0 });
 
         gsap.registerPlugin(MotionPathPlugin);
