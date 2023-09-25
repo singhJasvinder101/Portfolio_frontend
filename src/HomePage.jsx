@@ -138,6 +138,15 @@ const HomePage = () => {
                 </div>
             </section>
 
+            <section>
+                <div id="experiance" style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
+                    <h2 className='text-center' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
+                    <div className="certificates my-0 d-flex">
+                        <img src="" alt="" />
+                    </div>
+                </div>
+            </section>
+
             <ContactComponent contactSectionRef={contactSectionRef} contactSectionIsInView={contactSectionIsInView} />
 
         </div>

@@ -470,7 +470,7 @@ a:hover {
 
     .service-card-container {
         /* padding: 3rem; */
-        width: 100%;
+        width: 120%;
         display: flex;
         justify-content: space-around;
         align-items: center;

@@ -21,14 +21,18 @@ const ContactComponent = ({ contactSectionRef, contactSectionIsInView }) => {
             })
             if (data.success) {
                 toast.success("Message sent successfully", {
-                    position: "top-right",
+                    position: "bottom-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "light",
+                    theme: "black",
+                })
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 })
             } else {
                 toast.error("Message not sent", {
