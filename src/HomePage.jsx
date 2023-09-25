@@ -62,7 +62,6 @@ const HomePage = () => {
 
                             <h5 class="mt-4" id="proj-desc">Have a glance over skills I have and what I can perform for your
                                 project</h5>
-                            <button class="btn mt-4">See Projects</button>
                         </motion.div>
                         <motion.div class="skills-right d-flex w-50 mt-5 justify-content-around"
                             initial={{ x: 50, opacity: 0, scale: 1 }}

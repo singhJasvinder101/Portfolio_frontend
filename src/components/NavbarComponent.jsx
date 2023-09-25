@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { delay, motion, useAnimation } from 'framer-motion'
 
 const NavbarComponent = () => {
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [showMobileMenu, setShowMobileMenu] = useState(true);
 
 
     const toggleMobileMenu = () => {
@@ -13,9 +13,6 @@ const NavbarComponent = () => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
-        }
-        if (showMobileMenu) {
-            setShowMobileMenu(false);
         }
     };
 
