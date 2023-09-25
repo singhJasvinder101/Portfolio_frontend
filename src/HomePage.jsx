@@ -7,13 +7,15 @@ import { motion, useInView } from 'framer-motion';
 const HomePage = () => {
     const leftRightSectionRef = useRef(null)
     const contactSectionRef = useRef(null)
+    const experianceSection = useRef(null)
 
     const leftRightSectionIsInView = useInView(leftRightSectionRef)
     const contactSectionIsInView = useInView(contactSectionRef)
+    const experianceSectionisInView = useInView(experianceSection)
 
     useEffect(() => {
         console.log(contactSectionIsInView)
-    }, [leftRightSectionIsInView, contactSectionIsInView])
+    }, [leftRightSectionIsInView, contactSectionIsInView, experianceSectionisInView])
 
 
     return (
@@ -139,10 +141,36 @@ const HomePage = () => {
             </section>
 
             <section>
-                <div id="experiance" style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
-                    <h2 className='text-center' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
-                    <div className="certificates my-0 d-flex">
-                        <img src="" alt="" />
+                <div id="experiance" ref={experianceSection} style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
+                    <h2 className='text-center ' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
+                    <div className="certificates container mt-4 d-flex justify-content-between flex-wrap">
+                        <div className="my-4">
+                            <motion.img
+                                className=''
+                                initial={{ scale: 0, opacity: 0}}
+                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.1, duration: 0.6 } }: {}}
+                                src="/images/SamarpanCertificate.jpg"
+                                alt=""
+                                />
+                        </div>
+                        {/* <div className="my-4">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0}}
+                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } }: {}}
+                                className=''
+                                src="/images/AlliedgeTechnologiesCertificate.png"
+                                alt=""
+                            />
+                        </div> */}
+                        <div className="my-4 lastImage">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0}}
+                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } }: {}}
+                                className=''
+                                src="/images/TDP Vista certificate.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

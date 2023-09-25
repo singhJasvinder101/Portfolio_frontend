@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Pacifico&family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Martel+Sans:wght@600&family=Montserrat:wght@700;800&family=Noto+Sans:wght@500&family=Nunito:wght@600&family=Open+Sans:wght@500&family=Poppins:wght@400;700&family=Roboto+Condensed&family=Roboto+Slab:wght@500&family=Roboto:wght@500&family=Teko:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 }
 
 /* Making Navbar */
-body{
+body {
     font-family: "Poppins";
 }
 
@@ -93,27 +94,67 @@ a:hover {
     display: flex;
 }
 
-.hero-content{
-    opacity: 1;
-}
-.hero-img{
+.hero-content {
     opacity: 1;
 }
 
-.btn-inactive, .btn-active{
+.hero-img {
+    opacity: 1;
+}
+
+.btn-inactive,
+.btn-active {
     position: fixed;
     right: 4rem;
     top: 2rem;
 }
-.nav-btn{
+
+.nav-btn {
     display: none;
 }
+
+.certificates div {
+    width: 48%;
+}
+
+.certificates img {
+    width: 100%;
+    object-fit: contain;
+    object-position: 100%;
+    border-radius: 3rem;
+}
+
 /* For 768 px */
 
 @media screen and (max-width: 868px) {
-    .nav-btn{
+    .certificates img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    .certificates {
+        width: 90% !important;
+    }
+
+    .certificates div {
+        margin-top: 6rem !important;
+    }
+
+    .certificates {
+        flex-wrap: wrap !important;
+        width: 80%;
+        margin: auto;
+    }
+
+    .certificates div {
+        width: 100% !important;
+    }
+
+    .nav-btn {
         display: block;
     }
+
     body {
         overflow-x: hidden;
     }
@@ -402,6 +443,7 @@ a:hover {
         filter: blur(1px);
         /* Apply blur effect */
     }
+
     .about-me-img {
         display: none;
     }
