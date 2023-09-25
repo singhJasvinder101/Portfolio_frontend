@@ -127,23 +127,23 @@ a:hover {
 /* For 768 px */
 
 @media screen and (max-width: 868px) {
+    .skills-section{
+        padding: 2rem 1.2rem !important;
+    }
     .certificates img {
         display: block;
         margin: auto;
         width: 100%;
+        border-radius: 1.2rem !important;
     }
 
     .certificates {
         width: 90% !important;
     }
 
-    .certificates div {
-        margin-top: 6rem !important;
-    }
-
     .certificates {
         flex-wrap: wrap !important;
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
 
@@ -358,7 +358,8 @@ a:hover {
     }
 
     .about-me-left-content {
-        width: 80%;
+        width: 92%;
+        text-align: -webkit-center;
     }
 
 
@@ -441,6 +442,7 @@ a:hover {
         height: 4px;
         background-color: rgb(135, 206, 235);
         filter: blur(1px);
+        margin-left: 1rem;
         /* Apply blur effect */
     }
 

@@ -8,10 +8,12 @@ const HomePage = () => {
     const leftRightSectionRef = useRef(null)
     const contactSectionRef = useRef(null)
     const experianceSection = useRef(null)
+    const aboutMeSection = useRef(null)
 
     const leftRightSectionIsInView = useInView(leftRightSectionRef)
     const contactSectionIsInView = useInView(contactSectionRef)
     const experianceSectionisInView = useInView(experianceSection)
+    const aboutMeSectionisInView = useInView(aboutMeSection)
 
     useEffect(() => {
         console.log(contactSectionIsInView)
@@ -26,17 +28,20 @@ const HomePage = () => {
 
             <section id="about-me" class="about-me">
                 <div>
-                    <div class="about-me-flex">
+                    <div class="about-me-flex" ref={aboutMeSection}>
                         <div class="topp-left-about"></div>
                         <div class="top-left-about"></div>
                         <div class="about-me-content">
                             <div class="about-me-left-content">
-                                <h2>About Me</h2>
+                                <motion.h2
+                                    initial={{ opacity: 0, y: -50 }}
+                                    animate={aboutMeSectionisInView ? { opacity: 1, y: 0, transition: {duration: 0.3} } : {}}
+                                >About Me</motion.h2>
                                 <p>
                                     I am self motivated person passionate of coding. I am a dynamic and innovative web developer
                                     I thrive on transforming ideas into visually stunning and functional websites. My proactive
                                     approach enables me to anticipate and address potential challenges, ensuring smooth project
-                                    execution and timely deliveryCollaborative by nature, I enjoy working closely with teams,
+                                    execution and timely delivery. I enjoy working closely with teams,
                                     valuing open communication and creative/productive environment.
                                 </p>
                                 <div class="bottom-right-about"></div>
@@ -55,7 +60,7 @@ const HomePage = () => {
                 <div id="skills" class="skills-section">
                     <div class="container section-container" ref={leftRightSectionRef}>
                         <motion.div class="skills-left w-50"
-                            initial={{ x: -50, opacity: 0 }}
+                            initial={{ x: -30, opacity: 0 }}
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}>
                             <div>
                                 <h9><span style={{ color: 'rgb(135, 206, 235)' }}>Favourite Skills</span></h9>
@@ -66,7 +71,7 @@ const HomePage = () => {
                                 project</h5>
                         </motion.div>
                         <motion.div class="skills-right d-flex w-50 mt-5 justify-content-around"
-                            initial={{ x: 50, opacity: 0, scale: 1 }}
+                            initial={{ x: 30, opacity: 0, scale: 1 }}
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}
                         >
                             <div class="skill-cont-1 d-flex flex-column justify-content-center">
@@ -79,9 +84,9 @@ const HomePage = () => {
                             <div class="skill-cont-2  d-flex flex-column justify-content-center">
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Bootstrap</h6>
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Tailwind CSS</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Mongoose</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Git</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Git-Hub</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> Mongoose</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> Git</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Git-Hub</h6>
                             </div>
                         </motion.div>
                     </div>
@@ -143,20 +148,20 @@ const HomePage = () => {
             <section>
                 <div id="experiance" ref={experianceSection} style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
                     <h2 className='text-center ' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
-                    <div className="certificates container mt-4 d-flex justify-content-between flex-wrap">
+                    <div className="certificates container d-flex justify-content-between flex-wrap">
                         <div className="my-4">
                             <motion.img
                                 className=''
-                                initial={{ scale: 0, opacity: 0}}
-                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.1, duration: 0.6 } }: {}}
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.1, duration: 0.6 } } : {}}
                                 src="/images/SamarpanCertificate.jpg"
                                 alt=""
-                                />
+                            />
                         </div>
                         <div className="my-4">
                             <motion.img
-                                initial={{ scale: 0, opacity: 0}}
-                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } }: {}}
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
                                 className=''
                                 src="/images/AlliedgeTechnologiesCertificate.png"
                                 alt=""
@@ -164,8 +169,8 @@ const HomePage = () => {
                         </div>
                         <div className="my-4 lastImage">
                             <motion.img
-                                initial={{ scale: 0, opacity: 0}}
-                                animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } }: {}}
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
                                 className=''
                                 src="/images/TDP Vista certificate.jpg"
                                 alt=""
