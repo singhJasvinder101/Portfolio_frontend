@@ -153,7 +153,7 @@ const HomePage = () => {
                                 alt=""
                                 />
                         </div>
-                        {/* <div className="my-4">
+                        <div className="my-4">
                             <motion.img
                                 initial={{ scale: 0, opacity: 0}}
                                 animate={ experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } }: {}}
@@ -161,7 +161,7 @@ const HomePage = () => {
                                 src="/images/AlliedgeTechnologiesCertificate.png"
                                 alt=""
                             />
-                        </div> */}
+                        </div>
                         <div className="my-4 lastImage">
                             <motion.img
                                 initial={{ scale: 0, opacity: 0}}
