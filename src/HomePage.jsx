@@ -35,7 +35,7 @@ const HomePage = () => {
                             <div class="about-me-left-content">
                                 <motion.h2
                                     initial={{ opacity: 0, y: -50 }}
-                                    animate={aboutMeSectionisInView ? { opacity: 1, y: 0, transition: {duration: 0.3} } : {}}
+                                    animate={aboutMeSectionisInView ? { opacity: 1, y: 0, transition: { duration: 0.3 } } : {}}
                                 >About Me</motion.h2>
                                 <p>
                                     I am self motivated person passionate of coding. I am a dynamic and innovative web developer
