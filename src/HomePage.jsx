@@ -3,6 +3,7 @@ import HeroContent from './components/HeroContent';
 import NavbarComponent from './components/NavbarComponent';
 import ContactComponent from './components/ContactComponent';
 import { motion, useInView } from 'framer-motion';
+import ProjectCardComponent from './components/ProjectCardComponent';
 
 const HomePage = () => {
     const leftRightSectionRef = useRef(null)
@@ -16,7 +17,7 @@ const HomePage = () => {
     const aboutMeSectionisInView = useInView(aboutMeSection)
 
     useEffect(() => {
-        console.log(contactSectionIsInView)
+        // console.log(contactSectionIsInView)
     }, [leftRightSectionIsInView, contactSectionIsInView, experianceSectionisInView])
 
 
@@ -29,9 +30,10 @@ const HomePage = () => {
             <section id="about-me" class="about-me">
                 <div>
                     <div class="about-me-flex" ref={aboutMeSection}>
-                        <div class="topp-left-about"></div>
-                        <div class="top-left-about"></div>
                         <div class="about-me-content">
+                            <div class="about-me-img">
+                                <img src="/images/professional-programmer-writing.jpg" alt="" />
+                            </div>
                             <div class="about-me-left-content">
                                 <motion.h2
                                     initial={{ opacity: 0, y: -50 }}
@@ -46,9 +48,6 @@ const HomePage = () => {
                                 </p>
                                 <div class="bottom-right-about"></div>
                                 <div class="bottomm-right-about"></div>
-                            </div>
-                            <div class="about-me-img">
-                                <img src="/images/aboutimg.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -146,8 +145,36 @@ const HomePage = () => {
             </section>
 
             <section>
+                <div className='projects projects-section' style={{ backgroundColor: 'black' }}>
+                    <div className="projects-heading">
+                        <h2 className='text-light text-center'>My <span style={{ color: 'rgb(135, 206, 235)' }}>Projects</span></h2>
+                    </div>
+                    <div className="project-cards d-flex justify-content-around flex-wrap py-3">
+                        <ProjectCardComponent
+                            title={"Blog Website"}
+                            content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
+                            img={"/images/blog.jpg"}
+                            link={"https://tech-stuffs.netlify.app/"}
+                        />
+                        <ProjectCardComponent
+                            title={"Movies Streaming Website"}
+                            content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
+                            img={"/images/movies.jpg"}
+                            link={"https://series-addict.netlify.app/"}
+                        />
+                        <ProjectCardComponent
+                            title={"Chatting Website"}
+                            content={"React, Chakra Ui, Nodejs, Tailwind, MongoDB, Bootstrap"}
+                            img={"/images/chatting.jpg"}
+                            link={"https://x-chat-talks.netlify.app/"}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section>
                 <div id="experiance" ref={experianceSection} style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
-                    <h2 className='text-center ' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
+                    <h2 className='text-center py-5' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
                     <div className="certificates container d-flex justify-content-between flex-wrap">
                         <div className="my-4">
                             <motion.img

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { delay, motion, useAnimation } from 'framer-motion'
+import { Divide as Hamburger } from 'hamburger-react'
 
 const NavbarComponent = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(true);
@@ -7,7 +8,7 @@ const NavbarComponent = () => {
 
     const toggleMobileMenu = () => {
         setShowMobileMenu(!showMobileMenu);
-    };  
+    };
 
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -83,12 +84,12 @@ const NavbarComponent = () => {
                         </button>
                     </div>
                     <div className={`nav-btn mx-2 ${showMobileMenu ? 'btn-inactive' : 'btn-active'}`}
-                        style={{ height: '2rem' }}
                         onClick={toggleMobileMenu}>
-                        {showMobileMenu ?
+                        {/* {showMobileMenu ?
                             <i className="fas fa-bars" style={{ fontSize: '1.5rem' }}></i> :
                             <i className="fas fa-times" style={{ fontSize: '1.5rem' }}></i>
-                        }
+                        } */}
+                        <Hamburger />
                     </div>
                 </nav>
             </header>

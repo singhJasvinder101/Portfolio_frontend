@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion';
 import { animateContact } from '../../utils/ContactAnimation';
-
+import Typewriter from 'typewriter-effect';
 const HeroContent = () => {
     const controls = useAnimation();
 
@@ -42,7 +42,7 @@ const HeroContent = () => {
         });
     }, [])
 
-    
+
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -55,22 +55,28 @@ const HeroContent = () => {
 
     return (
         <section id="hero" className="hero">
-            <div className="hero-container">
+            <div className="hero-container d-flex flex-wrap">
                 <div className="hero-content">
                     <h5>Hello,<span style={{ color: 'rgb(135, 206, 235)' }}> I'am</span></h5>
                     <h1 style={{ color: 'rgb(135, 206, 235)' }}>Jasvinder Singh</h1>
-                    <h4>Full-Stack Web Developer</h4>
+                    <h4>
+                        <Typewriter
+                            options={{
+                                strings: ['Full Stack Developer', 'Freelancer', 'Programmer'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </h4>
                     <p className="pt-3">With the knowledge in web development and design, I offer the best projects resulting in
                         quality
                         work.</p>
-                    <div id="hero-btns" className="mt-5 d-flex">
-                        <a href='/images/About Me.pdf' className="btn" download>Download Resume</a>
-                        <button id="projects-btn" className="btn mx-3">
-                            <button onClick={() => scrollToSection('about-me')} id="proj"
-                                style={{ background: 'transparent', border: 'none' }}>About Me <i className="fa fa-arrow-right"></i>
-                            </button>
+                    <a href='/images/About Me.pdf' className="btn" download>Download Resume</a>
+                    <button id="projects-btn" className="btn-2 btn">
+                        <button onClick={() => scrollToSection('about-me')} id="proj"
+                            style={{ background: 'transparent', border: 'none' }}>About Me <i className="fa fa-arrow-right"></i>
                         </button>
-                    </div>
+                    </button>
                     <div className="hero-icons">
                         <a href="https://www.linkedin.com/in/jasvinder-singh-466a72256
 "><i className="fa fa-linkedin fa-fade" style={{ fontSize: '28px' }}></i></a>
@@ -80,7 +86,7 @@ const HeroContent = () => {
                             style={{ fontSize: '28px' }}></i></a>
                     </div>
                 </div>
-                <img className='hero-img' src="/images/myimg2.png" alt="Your Photo" />
+                <img className='hero-img' src="/images/view-3d-businessman.jpg" alt="Your Photo" />
             </div >
             <i className="fa fa-paper-plane aeroplane" style={{ fontSize: '36px', color: 'white' }}></i>
         </section >
