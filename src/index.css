@@ -68,8 +68,10 @@ a:hover {
         margin: 0 auto;
     }
 
-    .hero-img {
-        height: 45% !important;
+
+    .hero-container {
+        height: 100vh !important;
+
     }
 
     #hero-btns {
@@ -77,10 +79,12 @@ a:hover {
         flex-direction: column;
         margin: 0;
     }
-    .project-text{
+
+    .project-text {
         font-size: 1rem;
     }
-    .project-heading{
+
+    .project-heading {
         font-size: 1.6rem;
     }
 }
@@ -156,6 +160,11 @@ a:hover {
 /* For 768 px */
 
 @media screen and (max-width: 868px) {
+    .hero-img {
+        height: 35% !important;
+        border-radius: 250px 250px 0 0 !important;
+    }
+
     .btn {
         width: auto !important;
         margin: 0.5rem 0;
@@ -707,6 +716,7 @@ a:hover {
     .btn-2 {
         margin: 0 1rem !important;
     }
+
 
     header {
         width: 95vw;
