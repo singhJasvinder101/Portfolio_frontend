@@ -5,7 +5,6 @@ import { Divide as Hamburger } from 'hamburger-react'
 const NavbarComponent = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(true);
 
-
     const toggleMobileMenu = () => {
         setShowMobileMenu(!showMobileMenu);
     };

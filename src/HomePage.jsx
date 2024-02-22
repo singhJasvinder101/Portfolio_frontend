@@ -4,6 +4,8 @@ import NavbarComponent from './components/NavbarComponent';
 import ContactComponent from './components/ContactComponent';
 import { motion, useInView } from 'framer-motion';
 import ProjectCardComponent from './components/ProjectCardComponent';
+import ProjectCard2 from './components/ProjectCard2';
+import { FaShare } from 'react-icons/fa';
 
 const HomePage = () => {
     const leftRightSectionRef = useRef(null)
@@ -147,34 +149,64 @@ const HomePage = () => {
             <section>
                 <div className='projects projects-section' style={{ backgroundColor: 'black' }}>
                     <div className="projects-heading">
-                        <h2 className='text-light text-center'>My <span style={{ color: 'rgb(135, 206, 235)' }}>Projects</span></h2>
+                        <h2 className='text-light p-3 text-center'>My <span style={{ color: 'rgb(135, 206, 235)' }}>Projects</span></h2>
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
-                        <ProjectCardComponent
+                        <ProjectCard2
                             title={"Blog Website"}
                             content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
                         />
-                        <ProjectCardComponent
+                        <ProjectCard2
                             title={"Movies Streaming Website"}
                             content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
                         />
-                        <ProjectCardComponent
-                            title={"Chatting Website"}
+                        <ProjectCard2
+                            title={"Real-Time Chat Application"}
                             content={"React, Chakra Ui, Nodejs, Tailwind, MongoDB, Bootstrap"}
                             img={"/images/chatting.jpg"}
                             link={"https://x-chat-talks.netlify.app/"}
                         />
                     </div>
+                    {/* <div className="projects-heading">
+                        <p className='text-light p-3 text-center'>more <span style={{ color: 'rgb(135, 206, 235)' }}>Projects</span></p>
+                    </div>
+                    <div className="minor-projects container overflow-scroll">
+                        <div>
+                            <h4 href='https://quizz-app-brown-nine.vercel.app/' className='p-2' style={{ color: 'rgb(135, 206, 235)' }}>Quizz App <FaShare /></h4>
+                            <p className='text-white fs-6 px-2 pb-1'>save your progress, user friendly and stunning ui, result access, categories of tests</p>
+                            <p className='text-white px-2'>
+                                Tech Used:
+                                <ul className='d-flex'>
+                                    <li>React.js</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>Zustand</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 href='' className='p-2' style={{ color: 'rgb(135, 206, 235)' }}>Online Compiler <FaShare /></h4>
+                            <p className='text-white fs-6 px-2 pb-3'>various programming language compatible and customizable themes, fonts and web editor (new) more features to be added later</p>
+                            <p className='text-white px-2'>
+                                Tech Used:
+                                <ul className='d-flex flex-wrap'>
+                                    <li>React.js</li>
+                                    <li>Mongodb</li>
+                                    <li>Nodejs</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div> */}
                 </div>
             </section>
 
             <section>
                 <div id="experiance" ref={experianceSection} style={{ backgroundColor: 'rgba(0, 0, 0, 0.911)' }}>
-                    <h2 className='text-center py-5' style={{ color: 'rgb(135, 206, 235)' }}>Experiace</h2>
+                    <h2 className='text-light p-3 text-center'>My <span style={{ color: 'rgb(135, 206, 235)' }}>Experiance</span></h2>
                     <div className="certificates container d-flex justify-content-between flex-wrap">
                         <div className="my-4">
                             <motion.img

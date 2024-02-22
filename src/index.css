@@ -149,10 +149,15 @@ a:hover {
     color: #f8f8f8c0;
 }
 
+.minor-projects li {
+    margin: 1rem;
+}
+
+/* 
 .projects-section {
     height: 25rem;
     padding: 2rem;
-}
+} */
 
 
 
@@ -302,9 +307,10 @@ a:hover {
         height: 9rem;
     }
 
+    /* 
     li:nth-child(1) {
         display: none;
-    }
+    } */
 
     .hidden {
         display: none !important;
@@ -544,6 +550,9 @@ a:hover {
         height: auto;
         margin: 1rem;
         background-color: black;
+        border: 2px dotted rgb(135, 206, 235);
+        border-radius: 2rem;
+
     }
 
     .service-card-container .card ul li {
@@ -713,8 +722,8 @@ a:hover {
 
 
 @media screen and (min-width: 868px) {
-    .btn-2 {
-        margin: 0 1rem !important;
+    .btn {
+        margin-right: 1rem !important;
     }
 
 
@@ -992,6 +1001,8 @@ a:hover {
         height: auto;
         margin: 1rem;
         background-color: black;
+        border: 2px dotted rgb(135, 206, 235);
+        border-radius: 2rem;
     }
 
     .service-card-container .card ul li {
