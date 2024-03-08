@@ -159,16 +159,28 @@ const HomePage = () => {
                             link={"https://tech-stuffs.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"Movies Streaming Website"}
+                            title={"File Sharing Web App"}
+                            content={"WebRTC, Next.js, Socket.io, React.js, Typescript"}
+                            img={"/images/chatting.jpg"}
+                            link={"https://github.com/singhJasvinder101/XShare"}
+                        />
+                        <ProjectCard2
+                            title={"Free Movies Streaming Website"}
                             content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
                         />
                         <ProjectCard2
                             title={"Real-Time Chat Application"}
-                            content={"React, Chakra Ui, Nodejs, Tailwind, MongoDB, Bootstrap"}
+                            content={"React, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap"}
                             img={"/images/chatting.jpg"}
                             link={"https://x-chat-talks.netlify.app/"}
+                        />
+                        <ProjectCard2
+                            title={"Barbershop Site"}
+                            content={"Demo of project build during internship in startup  React, Framer-Motion, Tailwind CSS, Animations, UI"}
+                            img={"/images/chatting.jpg"}
+                            link={"https://demopage-xi.vercel.app/"}
                         />
                     </div>
                     {/* <div className="projects-heading">
