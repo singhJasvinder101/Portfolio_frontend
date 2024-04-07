@@ -99,14 +99,16 @@
 .cookieHeading {
     font-size: 1.5em;
     font-weight: 600;
-    color: rgb(241, 241, 241);
+    color: rgba(241, 241, 241, 0.993);
     z-index: 2;
 }
 
 .cookieDescription {
     font-size: 0.9em;
-    color: rgb(241, 241, 241);
+    color: rgba(241, 241, 241, 0.932);
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cookieDescription a {

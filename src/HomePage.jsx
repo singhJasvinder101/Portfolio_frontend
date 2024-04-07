@@ -71,25 +71,28 @@ const HomePage = () => {
                             <h5 class="mt-4" id="proj-desc">Have a glance over skills I have and what I can perform for your
                                 project</h5>
                         </motion.div>
-                        <motion.div class="skills-right d-flex w-50 mt-5 justify-content-around"
+                        <motion.div class="skills-right d-flex w-50 mt-1 justify-content-around"
                             initial={{ x: 30, opacity: 0, scale: 1 }}
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}
                         >
-                            <div class="skill-cont-1 d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>01</span> React.js</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>02</span> Next.js</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>03</span> Node Js</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>04</span> Mongo DB</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Javscript </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Typescript </h6>
-                            </div>
-                            <div class="skill-cont-2  d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Tailwind </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> Prisma </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> WebRTC </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Django </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>11</span> Zustand </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>12</span> Flask </h6>
+                            <div className="skill-cont-1 d-flex flex-wrap justify-content-center">
+                                <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React.js" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/nextjs.png" alt="Next.js" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/chakraui.png" alt="Chakra" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="MUI" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/prisma.png" alt="Prisma" width="50" height="50" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJHylFshFrTvTUWHDDTocgiQ5CQb2L_haO_A&s" alt="WebRTC" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="Redux" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" width="50" height="50" />
+                                <div className='bg-white'><img src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" width="50" height="50" /></div>
                             </div>
                         </motion.div>
                     </div>
@@ -174,16 +177,21 @@ const HomePage = () => {
                         />
                         <ProjectCard2
                             title={"Real-Time Chat Application"}
-                            content={"React, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap"}
+                            content={"React, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap, Tailwind"}
                             img={"/images/chatting.jpg"}
                             link={"https://x-chat-talks.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"Barbershop Site"}
-                            decription={"Demo of project build during internship in startup "}
-                            content={" React, Framer-Motion, Tailwind CSS, Animations, UI"}
+                            title={"Bargain Hub"}
+                            content={" Next.js, Typescript, Django, Python, Zustand"}
                             img={"/images/chatting.jpg"}
-                            link={"https://demopage-xi.vercel.app/"}
+                            link={"https://github.com/singhJasvinder101/bargane_hub"}
+                        />
+                        <ProjectCard2
+                            title={"Quizz Zone"}
+                            content={" React.js, Javascript, Tailwind CSS"}
+                            img={"/images/chatting.jpg"}
+                            link={"https://github.com/singhJasvinder101/bargane_hub"}
                         />
                     </div>
                     {/* <div className="projects-heading">

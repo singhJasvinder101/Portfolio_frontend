@@ -160,7 +160,19 @@ a:hover {
 } */
 
 
+.skill-cont-1 > img{
+    border-radius: 1.2rem;
+    margin: 0.4rem 1rem;
+}
 
+.skill-cont-1 > div{
+    border-radius: 1.2rem;
+    margin: 0.4rem 1rem;
+}
+
+.bg-blue{
+    background-color: rgb(85, 185, 224);
+}
 
 /* For 768 px */
 
