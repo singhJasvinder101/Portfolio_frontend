@@ -76,18 +76,20 @@ const HomePage = () => {
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}
                         >
                             <div class="skill-cont-1 d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>01</span> HTML & CSS</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>02</span> Javascript</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>01</span> React.js</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>02</span> Next.js</h6>
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>03</span> Node Js</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>04</span> Express</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Mongo DB</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>04</span> Mongo DB</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Javscript </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Typescript </h6>
                             </div>
                             <div class="skill-cont-2  d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Bootstrap</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Tailwind CSS</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> Mongoose</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> Git</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Git-Hub</h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Tailwind </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Prisma </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> WebRTC </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> Django </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Zustand </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Flask </h6>
                             </div>
                         </motion.div>
                     </div>
@@ -153,7 +155,7 @@ const HomePage = () => {
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
-                            title={"Blog Website"}
+                            title={"Tech Stuffs"}
                             content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
@@ -178,7 +180,8 @@ const HomePage = () => {
                         />
                         <ProjectCard2
                             title={"Barbershop Site"}
-                            content={"Demo of project build during internship in startup  React, Framer-Motion, Tailwind CSS, Animations, UI"}
+                            decription={"Demo of project build during internship in startup "}
+                            content={" React, Framer-Motion, Tailwind CSS, Animations, UI"}
                             img={"/images/chatting.jpg"}
                             link={"https://demopage-xi.vercel.app/"}
                         />
