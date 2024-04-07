@@ -81,15 +81,15 @@ const HomePage = () => {
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>03</span> Node Js</h6>
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>04</span> Mongo DB</h6>
                                 <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Javscript </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Typescript </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Typescript </h6>
                             </div>
                             <div class="skill-cont-2  d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Tailwind </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Prisma </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> WebRTC </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> Django </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Zustand </h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Flask </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Tailwind </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> Prisma </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> WebRTC </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Django </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>11</span> Zustand </h6>
+                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>12</span> Flask </h6>
                             </div>
                         </motion.div>
                     </div>
