@@ -70,8 +70,8 @@
 
 
 .cookieCard {
-    width: 360px;
-    height: 250px;
+    width: 380px;
+    height: 300px;
     background: linear-gradient(to right, rgb(78, 173, 204), rgb(98, 171, 196));
     display: flex;
     flex-direction: column;

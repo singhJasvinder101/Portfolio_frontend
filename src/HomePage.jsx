@@ -158,37 +158,37 @@ const HomePage = () => {
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
-                            title={"Tech Stuffs"}
+                            title={"TechByete - A Tech Blog Web App"}
                             content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"File Sharing Web App"}
+                            title={"XShare - Real Time Files Sharin"}
                             content={"WebRTC, Next.js, Socket.io, React.js, Typescript"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/XShare"}
                         />
                         <ProjectCard2
-                            title={"Free Movies Streaming Website"}
+                            title={"Stremo - A Movies/Series Streaming Site"}
                             content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"Real-Time Chat Application"}
+                            title={"XChat - Real-Time Chat Application"}
                             content={"React, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap, Tailwind"}
                             img={"/images/chatting.jpg"}
                             link={"https://x-chat-talks.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"Bargain Hub"}
+                            title={"Bargain-Hub - Stay updated to bargain"}
                             content={" Next.js, Typescript, Django, Python, Zustand"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/bargane_hub"}
                         />
                         <ProjectCard2
-                            title={"Quizz Zone"}
+                            title={"Quizzy - Categorial Quizz Questions"}
                             content={" React.js, Javascript, Tailwind CSS"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/bargane_hub"}
