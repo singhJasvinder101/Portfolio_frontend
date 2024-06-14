@@ -71,12 +71,14 @@ const HeroContent = () => {
                     <p className="pt-3">With the knowledge in web development and design, I offer the best projects resulting in
                         quality
                         work.</p>
-                    <a href='/images/jasvinder resume (1).pdf' className="btn" download>Download Resume</a>
-                    <button id="projects-btn" className="btn-2 btn">
-                        <button onClick={() => scrollToSection('about-me')} id="proj"
-                            style={{ background: 'transparent', border: 'none' }}>About Me <i className="fa fa-arrow-right"></i>
+                    <div className="buttons">
+                        <button disabled href='' className="btn" download>Download Resume</button>
+                        <button id="projects-btn" className="btn-2 btn">
+                            <button onClick={() => scrollToSection('about-me')} id="proj"
+                                style={{ background: 'transparent', border: 'none' }}>About Me <i className="fa fa-arrow-right"></i>
+                            </button>
                         </button>
-                    </button>
+                    </div>
                     <div className="hero-icons">
                         <a href="https://www.linkedin.com/in/jasvinder-singh-466a72256
 "><i className="fa fa-linkedin fa-fade" style={{ fontSize: '28px' }}></i></a>

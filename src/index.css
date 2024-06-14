@@ -183,6 +183,20 @@ a:hover {
         padding: 2rem 1.2rem !important;
     }
 
+    
+    .skills-right img{
+        width: 50px;
+        border-radius: 50%;
+        margin: 0.5rem 1rem;
+    }
+
+    .skills{
+        display: flex;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
     .certificates img {
         display: block;
         margin: auto;
@@ -507,6 +521,12 @@ a:hover {
 
     .about-me-img {
         display: none;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     /* skills section */
@@ -983,8 +1003,31 @@ a:hover {
         color: white;
     }
 
+    .skills-right{
+        width: 40%;
+    }
+
+    .skills-left{
+        width: 50%;
+    }
+
+
+    .skills-right img{
+        width: 50px;
+        border-radius: 50%;
+        margin: 0.5rem 1rem;
+    }
+
+    .skills{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        align-items: center;
+    }
+
     .section-container {
         display: flex;
+        justify-content: space-between;
     }
 
     /* services section */

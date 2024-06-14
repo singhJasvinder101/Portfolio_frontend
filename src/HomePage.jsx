@@ -60,7 +60,7 @@ const HomePage = () => {
             <section>
                 <div id="skills" class="skills-section">
                     <div class="container section-container" ref={leftRightSectionRef}>
-                        <motion.div class="skills-left w-50"
+                        <motion.div class="skills-left"
                             initial={{ x: -30, opacity: 0 }}
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}>
                             <div>
@@ -71,23 +71,26 @@ const HomePage = () => {
                             <h5 class="mt-4" id="proj-desc">Have a glance over skills I have and what I can perform for your
                                 project</h5>
                         </motion.div>
-                        <motion.div class="skills-right d-flex w-50 mt-5 justify-content-around"
+                        <motion.div class="skills-right"
                             initial={{ x: 30, opacity: 0, scale: 1 }}
                             animate={leftRightSectionIsInView ? { x: 0, opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.3 } } : {}}
                         >
-                            <div class="skill-cont-1 d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>01</span> HTML & CSS</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>02</span> Javascript</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>03</span> Node Js</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>04</span> Express</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>05</span> Mongo DB</h6>
-                            </div>
-                            <div class="skill-cont-2  d-flex flex-column justify-content-center">
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>06</span> Bootstrap</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>07</span> Tailwind CSS</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>08</span> Mongoose</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>09</span> Git</h6>
-                                <h6> <span style={{ color: 'rgb(135, 206, 235)' }}>10</span> Git-Hub</h6>
+                            <div class="skills">
+                                <img src="https://profilinator.rishav.dev/skills-assets/nextjs.png" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/chakraui.png" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/graphql.png" alt="" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmD38KsMgEwahtWc_Nfs5ZVktP9dBc36MUZA&s" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="" />
+
+                                <img src="https://profilinator.rishav.dev/skills-assets/prisma.png" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="" />
                             </div>
                         </motion.div>
                     </div>
