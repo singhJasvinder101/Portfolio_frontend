@@ -156,34 +156,40 @@ const HomePage = () => {
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
-                            title={"Blog Website"}
-                            content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
+                            title={"TechBytes - A Tech Blog Web App"}
+                            content={"MongoDb, React.js, Nodejs, Bootstrap, Robust Api, Authentication, AI"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"File Sharing Web App"}
+                            title={"XShare - Share Your Files Securely"}
                             content={"WebRTC, Next.js, Socket.io, React.js, Typescript"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/XShare"}
                         />
                         <ProjectCard2
-                            title={"Free Movies Streaming Website"}
-                            content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
+                            title={"Streamo - A Streaming Site For Series/Movies"}
+                            content={"TanstackQuery, React.js, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"Real-Time Chat Application"}
-                            content={"React, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap"}
+                            title={"ChitChats - Real-Time Chat Application"}
+                            content={"React.js, socket.io, Nodejs, Tailwind, MongoDB, Bootstrap"}
                             img={"/images/chatting.jpg"}
                             link={"https://x-chat-talks.netlify.app/"}
+                            />
+                        <ProjectCard2
+                            title={"BarganeHub - Be First To Bargane"}
+                            content={"Next.js, Typescript, MySql, Django, Tailwind CSS, Graphs"}
+                            img={"/images/chatting.jpg"}
+                            link={"https://github.com/singhJasvinder101/bargane_hub"}
                         />
                         <ProjectCard2
-                            title={"Barbershop Site"}
-                            content={"Demo of project build during internship in startup  React, Framer-Motion, Tailwind CSS, Animations, UI"}
+                            title={"Taskkify - Prioritize Your Tasks"}
+                            content={"React.js, Javascript, Tailwind CSS, DND"}
                             img={"/images/chatting.jpg"}
-                            link={"https://demopage-xi.vercel.app/"}
+                            link={"https://task-tracker-web.netlify.app/"}
                         />
                     </div>
                     {/* <div className="projects-heading">
@@ -245,8 +251,15 @@ const HomePage = () => {
                             <motion.img
                                 initial={{ scale: 0, opacity: 0 }}
                                 animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
-                                className=''
                                 src="/images/TDP Vista certificate.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-4">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
+                                src="/images/vihaan.jpg"
                                 alt=""
                             />
                         </div>
