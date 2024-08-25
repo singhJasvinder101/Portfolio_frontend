@@ -42,8 +42,8 @@ const HomePage = () => {
                                     animate={aboutMeSectionisInView ? { opacity: 1, y: 0, transition: { duration: 0.3 } } : {}}
                                 >About Me</motion.h2>
                                 <p>
-                                    I am self motivated person passionate of coding. I am a dynamic and innovative web developer
-                                    I thrive on transforming ideas into visually stunning and functional websites. My proactive
+                                    I am self motivated person passionate of coding. I am a dynamic and innovative web/app developer
+                                    I thrive on transforming ideas into visually stunning and functional softwares. My proactive
                                     approach enables me to anticipate and address potential challenges, ensuring smooth project
                                     execution and timely delivery. I enjoy working closely with teams,
                                     valuing open communication and creative/productive environment.

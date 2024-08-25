@@ -68,7 +68,7 @@ const HeroContent = () => {
                             }}
                         />
                     </h4>
-                    <p className="pt-3">With the knowledge in web development and design, I offer the best projects resulting in
+                    <p className="pt-3">With the knowledge in software development and design, I offer the best projects resulting in
                         quality
                         work.</p>
                     <button disabled href='' className="btn" download>Download Resume</button>
