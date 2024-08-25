@@ -78,17 +78,17 @@ const HomePage = () => {
                             <div className="skill-cont-1 d-flex flex-wrap justify-content-center">
                                 <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React.js" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/nextjs.png" alt="Next.js" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" style={{ backgroundColor: 'white' }} alt="Node.js" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" style={{ backgroundColor: 'white' }} alt="MongoDB" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/chakraui.png" alt="Chakra" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="MUI" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" style={{backgroundColor: 'white'}} alt="AWS" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="kubernetes" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/prisma.png" alt="Prisma" width="50" height="50" />
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJHylFshFrTvTUWHDDTocgiQ5CQb2L_haO_A&s" alt="WebRTC" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" width="50" height="50" />
-                                <img src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="Redux" width="50" height="50" />
+                                <img src="https://profilinator.rishav.dev/skills-assets/jenkins-icon.svg" alt="Jenkins" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" width="50" height="50" />
                                 <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" width="50" height="50" />
@@ -159,7 +159,7 @@ const HomePage = () => {
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
                             title={"TechByete - A Tech Blog Web App"}
-                            content={"MongoDb, React, Nodejs, Bootstrap, Robust Api, Authentication"}
+                            content={"MongoDb, React, Nodejs, Docker, Kubernetes, Jenkins, Seeding"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
                         />
@@ -249,7 +249,7 @@ const HomePage = () => {
                                 alt=""
                             />
                         </div>
-                        <div className="my-4 lastImage">
+                        <div className="my-4">
                             <motion.img
                                 initial={{ scale: 0, opacity: 0 }}
                                 animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
@@ -258,12 +258,21 @@ const HomePage = () => {
                                 alt=""
                             />
                         </div>
+                        <div className="my-4">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
+                                className=''
+                                src="/images/gssoc.jpg"
+                                alt=""
+                            />
+                        </div>
                         <div className="my-4 ">
                             <motion.img
                                 initial={{ scale: 0, opacity: 0 }}
                                 animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
                                 className=''
-                                src="/images/vihaan.jpg"
+                                src="/images/ssoc.jpg"
                                 alt=""
                             />
                         </div>
