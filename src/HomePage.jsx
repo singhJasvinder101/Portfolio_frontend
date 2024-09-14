@@ -159,7 +159,7 @@ const HomePage = () => {
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
                             title={"TechByete - A Tech Blog Web App"}
-                            content={"MongoDb, React, Nodejs, Docker, Kubernetes, Jenkins, Seeding"}
+                            content={"MongoDb, React, Nodejs, AWS, Docker, Kubernetes, Jenkins, Seeders"}
                             img={"/images/blog.jpg"}
                             link={"https://tech-stuffs.netlify.app/"}
                         />
@@ -167,11 +167,11 @@ const HomePage = () => {
                             title={"XShare - Real Time Files Sharin"}
                             content={"WebRTC, Next.js, Socket.io, React.js, Typescript"}
                             img={"/images/chatting.jpg"}
-                            link={"https://github.com/singhJasvinder101/XShare"}
+                            link={"https://github.com/singhJasvinder101/X_Share"}
                         />
                         <ProjectCard2
                             title={"Stremo - A Movies/Series Streaming Site"}
-                            content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB, Authentication"}
+                            content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
                         />
@@ -191,7 +191,7 @@ const HomePage = () => {
                             title={"Quizzy - Categorial Quizz Questions"}
                             content={" React.js, Javascript, Tailwind CSS"}
                             img={"/images/chatting.jpg"}
-                            link={"https://github.com/singhJasvinder101/bargane_hub"}
+                            link={"https://github.com/singhJasvinder101/Quizzy"}
                         />
                     </div>
                     {/* <div className="projects-heading">
