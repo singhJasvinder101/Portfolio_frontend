@@ -158,7 +158,7 @@ const HomePage = () => {
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
-                            title={"Homework AI: Instant Answers & Insights"}
+                            title={"Homework AI - Instant Answers & Insights"}
                             content={"Webpack, Optical Character Recognition, Tesseract, Flask, GPT"}
                             img={""}
                             link={"https://chromewebstore.google.com/detail/homework-ai/meghnnmlklkcnidecihpmpjhchnigahn"}
@@ -176,7 +176,7 @@ const HomePage = () => {
                             link={"https://tech-stuffs.netlify.app/"}
                         />
                         <ProjectCard2
-                            title={"XShare - Real Time Files Sharin"}
+                            title={"XShare - Real Time Files Sharing"}
                             content={"WebRTC, Next.js, Socket.io, React.js, Typescript"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/X_Share"}
