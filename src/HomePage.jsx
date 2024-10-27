@@ -158,6 +158,18 @@ const HomePage = () => {
                     </div>
                     <div className="project-cards d-flex justify-content-around flex-wrap py-3">
                         <ProjectCard2
+                            title={"Homework AI: Instant Answers & Insights"}
+                            content={"Webpack, Optical Character Recognition, Tesseract, Flask, GPT"}
+                            img={""}
+                            link={"https://chromewebstore.google.com/detail/homework-ai/meghnnmlklkcnidecihpmpjhchnigahn"}
+                        />
+                        <ProjectCard2
+                            title={"StreamSync - Stream from anywhere"}
+                            content={"Webpack, WebRTC, Node.js, Socket.io"}
+                            img={""}
+                            link={"https://github.com/singhJasvinder101/StreamSync"}
+                        />
+                        <ProjectCard2
                             title={"TechByete - A Tech Blog Web App"}
                             content={"MongoDb, React, Nodejs, AWS, Docker, Kubernetes, Jenkins, Seeders"}
                             img={"/images/blog.jpg"}
@@ -170,7 +182,7 @@ const HomePage = () => {
                             link={"https://github.com/singhJasvinder101/X_Share"}
                         />
                         <ProjectCard2
-                            title={"Stremo - A Movies/Series Streaming Site"}
+                            title={"MovieTime - A Movies/Series Streaming Site"}
                             content={"TanstackQuery, React, Tailwind, Bootstrap, Nodejs, MongoDB"}
                             img={"/images/movies.jpg"}
                             link={"https://series-addict.netlify.app/"}
@@ -186,12 +198,6 @@ const HomePage = () => {
                             content={" Next.js, Typescript, Django, Python, Zustand"}
                             img={"/images/chatting.jpg"}
                             link={"https://github.com/singhJasvinder101/bargane_hub"}
-                        />
-                        <ProjectCard2
-                            title={"Quizzy - Categorial Quizz Questions"}
-                            content={" React.js, Javascript, Tailwind CSS"}
-                            img={"/images/chatting.jpg"}
-                            link={"https://github.com/singhJasvinder101/Quizzy"}
                         />
                     </div>
                     {/* <div className="projects-heading">
