@@ -282,6 +282,24 @@ const HomePage = () => {
                                 alt=""
                             />
                         </div>
+                        <div className="my-4 ">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
+                                className=''
+                                src="/images/1743579939598.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div className="my-4 ">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={experianceSectionisInView ? { scale: 1, opacity: 1, transition: { delay: 0.4, duration: 0.6 } } : {}}
+                                className=''
+                                src="/images/1751891235383.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
