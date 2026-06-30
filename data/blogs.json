@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "agents-in-go-not-python",
+    "date": "2026-06-12",
+    "tags": [
+      "Go",
+      "Agentic AI"
+    ],
+    "readTime": "4 min",
+    "title": "Why I'm Building Agents in Go, Not Python",
+    "excerpt": "Every agent framework I looked at assumed Python by default. Once you're running agents in production next to services that already live in Go, that assumption gets expensive.",
+    "bodyMd": "Every agent framework I looked at assumed Python by default - and for good reason, the LLM ecosystem grew up there. But once you're running agents in production, alongside services that already live in Go, the friction of bridging runtimes adds up fast: extra containers, extra serialization, extra places for things to silently break.\n\nGo gives me static typing for tool schemas, predictable concurrency for parallel agent calls, and a single binary I can actually reason about under load. It's not about rejecting Python - I still reach for it when I need the ecosystem. It's about not paying a tax on every request just to glue two languages together.\n\nHere's roughly what a tool-calling agent interface looks like in the framework:\n\n```go\ntype Tool interface {\n    Name() string\n    Schema() map[string]any\n    Run(ctx context.Context, args map[string]any) (string, error)\n}\n\ntype Agent struct {\n    Model Model\n    Tools []Tool\n}\n\nfunc (a *Agent) Step(ctx context.Context, input string) (string, error) {\n    resp, err := a.Model.Complete(ctx, input, a.Tools)\n    if err != nil {\n        return \"\", err\n    }\n    return resp, nil\n}\n```\n\nNothing exotic - just interfaces and structs. That's the point. The framework is still early, but the core idea holds: **agent orchestration is a systems problem first, and a prompting problem second.**"
+  },
+  {
+    "slug": "cache-aside-vs-cqrs",
+    "date": "2026-05-28",
+    "tags": [
+      "System Design"
+    ],
+    "readTime": "5 min",
+    "title": "Cache-Aside vs CQRS: Picking the Right Pattern",
+    "excerpt": "These two get lumped together a lot, but they're solving different problems - one is about latency, the other is about shape.",
+    "bodyMd": "These two get lumped together a lot, but they're solving different problems. Cache-aside is about latency - you're shaving milliseconds off reads by sitting a fast store in front of a slower one, and you accept some staleness in exchange.\n\nCQRS is about shape - your write model and your read model genuinely look different, often because one side needs strong consistency and the other needs to answer twelve kinds of queries fast. Reaching for CQRS just to \"add a cache\" usually means more moving parts than the problem needed.\n\nA quick way I sanity-check which one I actually need:\n\n- **Same data shape, just slow** -> cache-aside\n- **Read and write models genuinely differ** -> CQRS\n- **Need eventual consistency tolerance** -> either works, but CQRS scales the read side independently\n- **Team can own two models long-term** -> CQRS, otherwise it rots into extra complexity nobody maintains\n\n> My rule of thumb: if the data shape is the same and you just want speed, cache-aside. If the read and write workloads have fundamentally different needs, CQRS earns its complexity."
+  },
+  {
+    "slug": "scraping-harera-playwright",
+    "date": "2026-05-09",
+    "tags": [
+      "Web Scraping",
+      "Playwright"
+    ],
+    "readTime": "3 min",
+    "title": "Scraping a JS-Rendered Govt Portal with Playwright",
+    "excerpt": "The project table on the Gurugram bench portal doesn't exist in the initial HTML at all - it shows up only after the page runs.",
+    "bodyMd": "While building the RERA data layer for the real-estate assistant, I hit a wall: the project table on the Gurugram bench portal doesn't exist in the initial HTML response at all. It's rendered client-side after a handful of XHR calls, so a plain `requests.get()` just returns an empty shell.\n\n![Network tab showing the project table only populating after XHR calls finish](https://picsum.photos/800/400?random=42)\n\n## The fix\n\nTreat the page like a browser would: drive it with Playwright, wait for the network to settle, then read the DOM after it's actually populated.\n\n```python\nfrom playwright.sync_api import sync_playwright\n\ndef fetch_projects(url: str) -> str:\n    with sync_playwright() as p:\n        browser = p.chromium.launch(headless=True)\n        page = browser.new_page()\n        page.goto(url, wait_until=\"networkidle\")\n        page.wait_for_selector(\"table.project-list\")\n        html = page.content()\n        browser.close()\n        return html\n```\n\nSlower than a raw HTTP request, but it's the only honest way to get data that genuinely doesn't exist until JavaScript runs.\n\nLesson for anyone scraping government portals in India: check devtools' Network tab before writing a single line of scraper code. Half the time there's a clean JSON endpoint hiding behind the UI."
+  }
+]
