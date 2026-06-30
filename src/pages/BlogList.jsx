@@ -1,3 +1,5 @@
+import TimeAgo from "react-timeago";
+
 export default function BlogListPage({ posts, postsStatus, postsError, onOpenPost, onBack }) {
     return (
         <main>
@@ -14,7 +16,7 @@ export default function BlogListPage({ posts, postsStatus, postsError, onOpenPos
                     {posts.map((p) => (
                         <button className="post-link" key={p.slug} onClick={() => onOpenPost(p.slug)}>
                             <div className="post-meta">
-                                <span>{p.date}</span><span>·</span><span>{p.readTime}</span><span>·</span><span>{p.tags.join(", ")}</span>
+                                <span><TimeAgo date={p.date} /></span><span>·</span><span>{p.readTime}</span><span>·</span><span>{p.tags.join(", ")}</span>
                             </div>
                             <div className="post-title">{p.title}</div>
                             <div className="post-excerpt">{p.excerpt}</div>

@@ -84,7 +84,7 @@ const HERO_LINES = [
     { plain: '  Name:     "Jasvinder",', key: true, field: "Name" },
     { plain: '  Role:     "Software Engineer @ Omniful",', key: true, field: "Role" },
     { plain: '  Stack:    []string{"Go", "Python", "Kafka", "LangGraph"},', key: true, field: "Stack" },
-    { plain: '  Building: "an AI agent that understands Indian real estate",', key: true, field: "Building" },
+    { plain: '  Building: "Distributed Systems and Agentic AI Engineering",', key: true, field: "Building" },
     { plain: "}", key: true },
     { plain: "" }
 ];

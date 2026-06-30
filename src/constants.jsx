@@ -1,26 +1,26 @@
 export const STACK = [
-    "Go", "Python", "Kafka", "Redis", "PostgreSQL", "MongoDB",
-    "Docker", "Kubernetes", "AWS", "LangGraph", "RAG Pipelines", "Vector DBs"
+    "Go", "Python", "Kafka", "Redis", "PostgreSQL", "MongoDB", "GIT",
+    "Docker", "Kubernetes", "Microservices", "AWS", "LangGraph", "RAG Pipelines", "Vector DBs"
 ];
 
 export const PROJECTS = [
     {
-        title: "Agentic Real Estate Assistant",
-        desc: "A multi-agent due-diligence platform for the Indian residential & commercial market. Planner → RERA → Builder → Location → Price → Comparison → Report — each stage handled by a dedicated agent.",
-        tags: ["Python", "FastAPI", "LangGraph", "Pydantic"],
-        href: "#"
+        title: "Distributed Order & Inventory System",
+        desc: "A distributed order and inventory system built in Go, using SQS for Bulk Orders, Kafka for high throughputevent streaming, and PostgreSQL for consistent data storage. Designed to handle high throughput and ensure eventual consistency across services.",
+        tags: ["Golang", "SQS", "Kafka", "PostgreSQL", "Microservices"],
+        href: "https://github.com/singhJasvinder101/oms_service"
     },
     {
         title: "Go Agent Framework",
-        desc: "Open-source framework for building LLM agents natively in Go — lightweight orchestration without dragging in a Python runtime just to call a model.",
-        tags: ["Go", "LLM Tooling", "Open Source"],
-        href: "#"
+        desc: "A modular AI framework in Go providing unified interfaces for LLM inference, embeddings, prompt templating, and streaming across multiple llms.",
+        tags: ["Go", "LLM's", "RAG", "Framework"],
+        href: "https://github.com/singhJasvinder101/agentic-go"
     },
     {
-        title: "System Design Question Bot",
-        desc: "A cron-job agent that scans GitHub repos and generates HLD/LLD interview questions, delivered straight to Telegram, Slack, or Gmail. Split-model architecture with long-term memory in ChromaDB.",
-        tags: ["Gemini", "GPT-4o", "ChromaDB"],
-        href: "#"
+        title: "LeetPush",
+        desc: "A Chrome extension that allows users to version control their LeetCode solutions by pushing them to a GitHub repository with single click",
+        tags: ["React", "Node.js", "Github API", "Chrome Extension"],
+        href: "https://github.com/singhJasvinder101/leetpush"
     }
 ];
 

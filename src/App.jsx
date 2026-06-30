@@ -10,7 +10,7 @@ export default function App() {
   const [page, setPage] = useState("home"); // 'home' | 'blogList' | 'post'
   const [activeSlug, setActiveSlug] = useState(null);
   const pendingScrollRef = useRef(null);
-  const [posts, setPosts] = useState(POSTS);
+  const [posts, setPosts] = useState([]);
   const [postsStatus, setPostsStatus] = useState("loading");
   const [postsError, setPostsError] = useState("");
 

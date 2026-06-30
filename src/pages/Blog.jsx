@@ -1,3 +1,4 @@
+import TimeAgo from "react-timeago";
 import MarkdownContent from "../compoents/Content";
 
 export default function PostPage({ slug, posts, onBack, onBackHome }) {
@@ -25,7 +26,7 @@ export default function PostPage({ slug, posts, onBack, onBackHome }) {
                     <button className="back-link" onClick={onBack}>$ cd ../blog</button>
                     <div className="eyebrow">cat {post.slug}.md</div>
                     <div className="post-meta" style={{ marginBottom: 14 }}>
-                        <span>{post.date}</span><span>·</span><span>{post.readTime} read</span>
+                        <span> <TimeAgo date={post.date} /></span><span>·</span><span>{post.readTime} read</span>
                     </div>
                     <h1 className="post-page-title">{post.title}</h1>
                     <div className="post-tags">

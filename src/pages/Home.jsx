@@ -1,3 +1,4 @@
+import TimeAgo from "react-timeago";
 import HeroTerminal from "../compoents/Terminal";
 import { PROJECTS, STACK } from "../constants";
 
@@ -11,8 +12,7 @@ export default function HomePage({ posts, postsStatus, onOpenPost, onViewAllPost
                     <HeroTerminal />
                     <p className="hero-sub">
                         Backend engineer at Omniful, building services in Go and chasing the harder problem of
-                        making AI agents reason reliably. Currently deep in a multi-agent system for Indian
-                        real-estate due diligence.
+                        making AI agents reason reliably. Currently deep in a multi-agent systems.
                     </p>
                     <div className="hero-cta">
                         <a className="btn btn-primary" href="#projects">$ open ./projects</a>
@@ -37,6 +37,14 @@ export default function HomePage({ posts, postsStatus, onOpenPost, onViewAllPost
                                 LangGraph, RAG pipelines, vector search, and an <strong>open-source agent framework
                                     written in Go</strong> - because I think the ecosystem needs fewer Python wrappers and
                                 more systems-level thinking.
+                            </p>
+                            <p>
+                                I also write about backend systems, agentic AI, and whatever breaks at 2am. You can find
+                                my posts in the <strong>blog</strong> section below.
+                            </p>
+                            <p>
+                                If you want to chat about backend systems, agentic AI, or just want to say hi, reach out
+                                via <a href="mailto:jasvindersingh3593@gmail.com">email</a>.
                             </p>
                         </div>
                         <div className="codecard">
@@ -74,11 +82,12 @@ export default function HomePage({ posts, postsStatus, onOpenPost, onViewAllPost
                 <div className="wrap">
                     <div className="eyebrow">ls projects/ -la</div>
                     <h2>Projects</h2>
+                    <p className="section-intro"> Top 3 projects from my library</p>
                     <div className="proj-grid">
                         {PROJECTS.map((p) => (
                             <div className="card" key={p.title}>
                                 <div className="card-title">
-                                    {p.title} <a href={p.href} aria-label="View source">↗</a>
+                                    <a className="text-large" href={p.href} aria-label="View source">{p.title} ↗</a>
                                 </div>
                                 <p className="card-desc">{p.desc}</p>
                                 <div className="tag-row">
@@ -100,7 +109,7 @@ export default function HomePage({ posts, postsStatus, onOpenPost, onViewAllPost
                     {recentPosts.map((p) => (
                         <button className="post-link" key={p.slug} onClick={() => onOpenPost(p.slug)}>
                             <div className="post-meta">
-                                <span>{p.date}</span><span>·</span><span>{p.readTime}</span><span>·</span><span>{p.tags.join(", ")}</span>
+                                <span><TimeAgo date={p.date} /></span><span>·</span><span>{p.readTime}</span><span>·</span><span>{p.tags.join(", ")}</span>
                             </div>
                             <div className="post-title">{p.title}</div>
                             <div className="post-excerpt">{p.excerpt}</div>

@@ -1,4 +1,4 @@
-const API_BASE = "/api/blogs";
+const API_BASE = "http://localhost:8000/api/blogs";
 
 export async function fetchBlogs() {
   const response = await fetch(API_BASE);
