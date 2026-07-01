@@ -128,13 +128,13 @@ export default function HomePage({ posts, postsStatus, onOpenPost, onViewAllPost
                     <h2>Get in touch</h2>
                     <p className="section-intro">Open to interesting backend and AI-agent problems. Easiest way to reach me below.</p>
                     <div className="contact-row">
-                        <a className="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <a className="contact-link" href="https://github.com/singhJasvinder101" target="_blank" rel="noopener noreferrer">
                             <span className="arrow">→</span> github
                         </a>
-                        <a className="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <a className="contact-link" href="https://www.linkedin.com/in/jasvinder-singh-466a72256/" target="_blank" rel="noopener noreferrer">
                             <span className="arrow">→</span> linkedin
                         </a>
-                        <a className="contact-link" href="mailto:you@example.com">
+                        <a className="contact-link" href="mailto:jasvindersingh3593@gmail.com">
                             <span className="arrow">→</span> email
                         </a>
                     </div>
