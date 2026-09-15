@@ -22,5 +22,12 @@ dist-ssr
 *.sln
 *.sw?
 
+# Next.js
+.next
+out
+build
 
+# Env files
+.env
+.env*.local
 backend/.env
