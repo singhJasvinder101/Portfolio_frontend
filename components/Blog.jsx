@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TimeAgo from "react-timeago";
+import TimeAgo from "./TimeAgoClient";
 import MarkdownContent from "./Content";
 
 export default function PostPage({ slug, post }) {

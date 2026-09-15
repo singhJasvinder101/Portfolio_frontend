@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const EMPTY_FORM = { slug: "", date: "", tags: "", readTime: "1 min", title: "", excerpt: "", bodyMd: "" };
+const EMPTY_FORM = { slug: "", date: "", tags: "", readTime: "1 min", title: "", excerpt: "", bodyMd: "", status: "published" };
 
 export default function AdminBlogManager() {
     const [posts, setPosts] = useState([]);
@@ -14,7 +14,7 @@ export default function AdminBlogManager() {
 
     const loadPosts = useCallback(async () => {
         try {
-            const res = await fetch("/api/blogs");
+            const res = await fetch("/api/blogs?status=all");
             const data = await res.json();
             setPosts(Array.isArray(data) ? data : []);
         } catch {
@@ -44,6 +44,7 @@ export default function AdminBlogManager() {
             title: post.title || "",
             excerpt: post.excerpt || "",
             bodyMd: post.bodyMd || "",
+            status: post.status || "published",
         });
         setMessage("");
     };
@@ -78,7 +79,7 @@ export default function AdminBlogManager() {
     };
 
     const handleDelete = async (slug) => {
-        if (!window.confirm(`Delete post "${slug}"?`)) return;
+        if (!window.confirm(`Delete post "${slug}"? This can't be undone.`)) return;
         setMessage("");
         try {
             const res = await fetch(`/api/blogs/${slug}`, { method: "DELETE" });
@@ -88,9 +89,30 @@ export default function AdminBlogManager() {
                 return;
             }
             if (editingSlug === slug) resetForm();
+            setMessage(`Post "${slug}" deleted.`);
             loadPosts();
         } catch {
             setMessage("Delete failed.");
+        }
+    };
+
+    const handleToggleStatus = async (post) => {
+        const nextStatus = post.status === "draft" ? "published" : "draft";
+        setMessage("");
+        try {
+            const res = await fetch(`/api/blogs/${post.slug}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ status: nextStatus }),
+            });
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                setMessage(data.error || "Failed to update status.");
+                return;
+            }
+            loadPosts();
+        } catch {
+            setMessage("Failed to update status.");
         }
     };
 
@@ -162,7 +184,18 @@ export default function AdminBlogManager() {
                                 />
                             </label>
                             <label className="admin-field">
-                                <span>Body (Markdown)</span>
+                                <span>Status</span>
+                                <select
+                                    className="admin-input"
+                                    value={form.status}
+                                    onChange={handleChange("status")}
+                                >
+                                    <option value="published">Published</option>
+                                    <option value="draft">Draft</option>
+                                </select>
+                            </label>
+                            <label className="admin-field">
+                                <span>Body (Markdown — images: ![alt](image-url))</span>
                                 <textarea
                                     className="admin-input admin-textarea"
                                     value={form.bodyMd}
@@ -191,7 +224,9 @@ export default function AdminBlogManager() {
                             {posts.map((p) => (
                                 <div className="admin-list-item" key={p.slug}>
                                     <div>
-                                        <div className="post-title">{p.title}</div>
+                                        <div className="post-title">
+                                            {p.title} {p.status === "draft" && <span className="tag tag-draft">draft</span>}
+                                        </div>
                                         <div className="post-meta">
                                             <span>{p.slug}</span><span>·</span><span>{p.date}</span>
                                         </div>
@@ -199,6 +234,9 @@ export default function AdminBlogManager() {
                                     <div className="admin-list-actions">
                                         <button type="button" className="btn btn-ghost" onClick={() => selectPost(p)}>
                                             edit
+                                        </button>
+                                        <button type="button" className="btn btn-ghost" onClick={() => handleToggleStatus(p)}>
+                                            {p.status === "draft" ? "publish" : "unpublish"}
                                         </button>
                                         <button type="button" className="btn btn-ghost" onClick={() => handleDelete(p.slug)}>
                                             delete

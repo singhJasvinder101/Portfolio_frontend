@@ -7,7 +7,9 @@ export async function GET(request, { params }) {
   const { slug } = await params;
   try {
     await connectDb();
-    const blog = await Blog.findOne({ slug }).lean();
+    const includeDrafts = new URL(request.url).searchParams.get("status") === "all";
+    const query = includeDrafts ? { slug } : { slug, status: { $ne: "draft" } };
+    const blog = await Blog.findOne(query).lean();
     if (!blog) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }

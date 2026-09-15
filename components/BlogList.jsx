@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TimeAgo from "react-timeago";
+import TimeAgo from "./TimeAgoClient";
 
 export default function BlogListPage({ posts, postsStatus, postsError }) {
     return (
@@ -8,7 +8,7 @@ export default function BlogListPage({ posts, postsStatus, postsError }) {
                 <div className="wrap">
                     <Link className="back-link" href="/">$ cd ..</Link>
                     <div className="eyebrow">ls blog/ -la</div>
-                    <h2>All Posts</h2>
+                    <h1>All Posts</h1>
                     <p className="section-intro">Everything I&apos;ve written so far, newest first.</p>
                     {postsStatus === "fallback" && (
                         <div className="blog-state">api offline - showing bundled posts{postsError ? ` (${postsError})` : ""}</div>

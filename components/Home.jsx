@@ -1,8 +1,8 @@
 import Link from "next/link";
-import TimeAgo from "react-timeago";
+import TimeAgo from "./TimeAgoClient";
 import HeroTerminal from "./Terminal";
 import { PROJECTS, STACK } from "@/lib/constants";
-import { SITE_ROLE, SITE_COMPANY } from "@/lib/site-config";
+import { SITE_NAME, SITE_ROLE, SITE_COMPANY } from "@/lib/site-config";
 
 export default function HomePage({ posts, postsStatus }) {
     const recentPosts = posts.slice(0, 2);
@@ -11,6 +11,7 @@ export default function HomePage({ posts, postsStatus }) {
         <main>
             <section className="hero">
                 <div className="wrap">
+                    <h1 className="sr-only">{SITE_NAME} — {SITE_ROLE} at {SITE_COMPANY}</h1>
                     <HeroTerminal />
                     <p className="hero-sub">
                         {SITE_ROLE} at {SITE_COMPANY}, building services in Go and chasing the harder problem of

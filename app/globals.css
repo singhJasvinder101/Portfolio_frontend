@@ -173,7 +173,12 @@ body {
   margin-bottom: 14px; display:flex; align-items:center; gap:8px;
 }
 .pf .eyebrow::before{ content:"›"; color: var(--text-faint); }
-.pf h2{ font-family: var(--font-mono); font-size: 24px; font-weight: 600; margin-bottom: 22px; color: var(--text); }
+.pf h1, .pf h2{ font-family: var(--font-mono); font-size: 24px; font-weight: 600; margin-bottom: 22px; color: var(--text); }
+
+.sr-only{
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 .pf .section-intro{ color: var(--text-dim); max-width: 600px; margin-bottom: 36px; }
 
 /* about */
@@ -216,6 +221,10 @@ body {
 .pf .tag{
   font-family: var(--font-mono); font-size: 11px; padding: 3px 8px; border-radius: 4px;
   background: var(--accent2-soft); color: var(--accent2); border: 1px solid rgba(79,209,197,0.25);
+}
+.pf .tag-draft{
+  background: var(--accent-soft); color: var(--accent); border-color: rgba(232,179,57,0.3);
+  margin-left: 6px; vertical-align: middle;
 }
 
 /* blog list / preview cards */
@@ -328,6 +337,7 @@ body {
 .pf .admin-input{
   background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px;
   color: var(--text); font-family: var(--font-sans); font-size: 14px; padding: 10px 12px;
+  color-scheme: dark;
 }
 .pf .admin-input:focus{ outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .pf .admin-textarea{ font-family: var(--font-mono); font-size: 13px; line-height: 1.6; resize: vertical; }
