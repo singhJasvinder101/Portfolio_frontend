@@ -1,4 +1,5 @@
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Nav from "@/components/Nav";
 import { SITE_NAME, SITE_ROLE, SITE_URL, SITE_DESCRIPTION } from "@/lib/site-config";
 
@@ -40,6 +41,9 @@ export default function RootLayout({ children }) {
           {children}
           <footer>built with Go-brain &amp; late-night coffee · © 2026 jasvinder</footer>
         </div>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
